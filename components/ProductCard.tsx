@@ -25,7 +25,7 @@ const ProductCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
         className="h-[250px] rounded-lg object-cover"
       />
       <div>
-      <p className="text-md font-medium">{product.title}</p>
+      <p className="text-sm font-medium line-clamp-1">{product.title}</p>
         <p className="text-xs font-medium text-muted-foreground text-grey-2 pt-2">{product.category}</p>
       </div>
       <div className="flex justify-between items-center">
