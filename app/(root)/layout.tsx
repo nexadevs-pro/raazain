@@ -13,8 +13,8 @@ import Provider from "@/lib/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Borcelle Store",
-  description: "Borcelle Ecommerce Store",
+  title: "Raazain Store",
+  description: "Raazain Ecommerce Store",
 };
 
 export default function RootLayout({
