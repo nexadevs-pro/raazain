@@ -12,7 +12,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
   return (
-    <Card className="p-3 w-[250px] h-[300px]">
+    <Card className="p-3 w-[250px] h-[320px]">
     <Link
       href={`/products/${product._id}`}
       className="w-[220px] flex flex-col gap-2"
