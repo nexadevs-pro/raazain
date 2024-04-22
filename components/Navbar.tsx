@@ -22,7 +22,7 @@ const Navbar = () => {
     <section className="w-full bg-white">
     <div className="sticky top-0 z-10 py-2 px-6 flex gap-2 justify-between items-center bg-white max-sm:px-2  mx-auto max-w-7xl ">
       <Link href="/">
-        <Image src="/logo.svg" alt="logo" width={150} height={120} />
+        <Image src="/logo.svg" alt="logo" width={150} height={150} />
       </Link>
 
       <div className="flex gap-3 border border-grey-2 px-3 py-1 items-center rounded-lg">
