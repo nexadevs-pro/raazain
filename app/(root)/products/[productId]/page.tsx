@@ -23,7 +23,7 @@ const ProductDetails = async ({ params }: { params: { productId: string }}) => {
     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mx-auto gap-16 py-10 ">
       <Gallery productMedia={productDetails.media} />
       <ProductInfo productInfo={productDetails} />
-      <div className='flex flex-col space-y-9 overflow-y-auto h-[35rem]'>
+      <div className='flex flex-col space-y-9 overflow-y-auto h-[28rem]'>
       <p className="text-2xl font-bold text-indigo-950">Related Products</p>
         {relatedProducts?.map((product: ProductType) => (
           <RelatedCard key={product._id} product={product} />
