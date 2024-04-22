@@ -33,6 +33,10 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
       <div className="flex flex-col gap-2">
         <p className='text-gray-700 line-clamp-3 mt-2'>{productInfo.description}</p>
         <p className="text-2xl font-semibold text-primary">Dhs. {productInfo.price}</p>
+        <div className="flex flex-row items-center gap-x-2">
+        <p className="text-xs line-through text-muted-foreground">Dhs. 121</p>
+        <p className="text-sm text-primary">21% OFF</p>
+        </div>
       </div>
 
       {productInfo.colors.length > 0 && (

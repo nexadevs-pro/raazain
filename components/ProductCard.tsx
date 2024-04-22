@@ -3,7 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import HeartFavorite from "./HeartFavorite";
-import { Card } from "./ui/card";
+import { Card, CardHeader, CardFooter } from "@nextui-org/react";
+import { Heart, ShoppingBagIcon } from "lucide-react";
+import { Button } from "./ui/button";
+import { FaStar } from "react-icons/fa";
 
 interface ProductCardProps {
   product: ProductType;
@@ -12,28 +15,32 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
   return (
-    <Card className="p-3 w-[250px] h-[350px]">
-    <Link
-      href={`/products/${product._id}`}
-      className="w-[220px] flex flex-col gap-2"
-    >
-      <Image
-        src={product.media[0]}
-        alt="product"
-        width={250}
-        height={300}
-        className="h-[250px] rounded-lg object-cover"
-      />
-      <div>
-      <p className="text-sm font-medium line-clamp-1">{product.title}</p>
-        <p className="text-xs font-medium text-muted-foreground text-grey-2 pt-2">{product.category}</p>
-      </div>
-      <div className="flex justify-between items-center">
-        <p className="text-body-bold text-primary">${product.price}</p>
-        <HeartFavorite product={product} updateSignedInUser={updateSignedInUser} />
-      </div>
-    </Link>
+    <Link key={product._id} href={`/products/${product._id}`}>
+    <Card className='flex justify-between cursor-pointer relative w-[250px]'>
+      <CardHeader>
+        <Image width={300} height={300} src={product.media[0]} alt='product' className="w-[300px] h-[230px]" />
+        <div className='absolute bottom-28 right-5'>
+          <HeartFavorite product={product} updateSignedInUser={updateSignedInUser} />
+        </div>
+      </CardHeader>
+      <CardFooter className='flex flex-col items-start space-y-1 '>
+        <h1 className='text-sm line-clamp-1'>{product.title}</h1>
+        <p className='text-primary font-medium'>Dhs. {product.price}</p>
+        <div className='flex flex-row  items-center justify-between'>
+          <div className='flex flex-row  items-center justify-between'>
+            <div className='flex flex-row items-center gap-x-2'>
+              <h1 className='line-through pr-1 text-xs'>Dhs. 121</h1>
+              <p className='text-xs text-primary'>25% OFF</p>
+            </div>
+            <div className='ml-16 flex items-center gap-x-1'>
+              <p>4.5</p>
+              <FaStar className='text-yellow-500' />
+            </div>
+          </div>
+        </div>
+      </CardFooter>
     </Card>
+    </Link>
   );
 };
 
