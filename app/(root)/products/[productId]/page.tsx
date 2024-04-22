@@ -20,11 +20,11 @@ const ProductDetails = async ({ params }: { params: { productId: string }}) => {
         <BreadCrumbs productInfo={productDetails} />
       </div>
       <div className="flex flex-row justify-between ">
-    <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mx-auto gap-16 py-10 px-5 ">
+    <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mx-auto gap-16 py-10 ">
       <Gallery productMedia={productDetails.media} />
       <ProductInfo productInfo={productDetails} />
-      <div className='flex flex-col space-y-9 mt-10'>
-      <p className="text-3xl font-bold text-indigo-950">Related Products</p>
+      <div className='flex flex-col space-y-9 overflow-y-auto h-[35rem]'>
+      <p className="text-2xl font-bold text-indigo-950">Related Products</p>
         {relatedProducts?.map((product: ProductType) => (
           <RelatedCard key={product._id} product={product} />
         ))}

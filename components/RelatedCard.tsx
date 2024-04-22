@@ -12,10 +12,10 @@ interface ProductCardProps {
 const RelatedCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
   
   return (
-    <section>
+    <section >
         <Link href={`/products/${product._id}`}>
-        <div key={product.title} className='flex flex-row border-b space-x-2'>
-                        <Image src={product.media[0]} alt={product.title} height={80} width={80} className='w-[80px] h-[80px]'/>
+        <div key={product.title} className='flex flex-row border-b space-x-2 -mt-4 '>
+                        <Image src={product.media[0]} alt={product.title} height={50} width={50} className='w-[50px] h-[50px]'/>
                         <div className='flex flex-col justify-center gap-x-2'>
                             <h1 className='text-sm text-muted-foreground'>{product.title}</h1>
                             <p className='text-primary'>Dhs. {product.price}</p>
