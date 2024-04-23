@@ -6,7 +6,6 @@ import { MarqueeComponent } from "@/components/Marquee";
 import NewsLetter from "@/components/NewsLetter";
 import ProductList from "@/components/ProductList";
 import ProductListCosrx from "@/components/ProductListCosrx";
-import ProductListLa from "@/components/ProductListLa";
 import ProductListOrdinary from "@/components/ProductListOrdinary";
 import ProductListOtwo from "@/components/ProductListOtwo";
 import ProductListSpecial from "@/components/ProductListSpecial";
@@ -24,9 +23,8 @@ export default function Home() {
       <LimitedOffer />
       <ProductListSpecial />
       <RelatedList />
-      {/* <ProductList /> */}
+      
       <ProductListOtwo />
-      <ProductListLa />
       <ProductListCosrx />
       <ProductListOrdinary />
       <CallToAction />
