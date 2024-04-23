@@ -13,7 +13,7 @@ const ProductListOtwo = async () => {
             <CarouselContent className="flex mx-auto ">
           {products.map((product: ProductType) => (
             <CarouselItem   className="lg:basis-1/3 xl:basis-1/4  ">
-              <div className="p-5">
+              <div className="p-5 -ml-[36px]">
             <ProductCardOtwo key={product._id} product={product}/>
             </div>
             </CarouselItem>
