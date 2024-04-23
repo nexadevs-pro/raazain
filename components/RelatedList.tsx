@@ -12,7 +12,7 @@ const RelatedList = async () => {
           <Carousel className="xl:max-w-7xl lg:max-w-7xl px-10 flex gap mx-auto pb-10">
             <CarouselContent className="flex mx-auto ">
           {products.map((product: ProductType) => (
-            <CarouselItem   className=" basis-1/2 md:basis-1/3 xl:basis-1/4 flex-wrap  ">
+            <CarouselItem   className=" basis-1/2 md:basis-1/3 xl:basis-1/4 -ml-9 flex-wrap">
               <div className="p-5">
             <ProductCard key={product._id} product={product}/>
             </div>

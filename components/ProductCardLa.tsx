@@ -14,9 +14,9 @@ const ProductCardLa = ({ product, updateSignedInUser }: ProductCardProps ) => {
   
   return (
     <section>
-        {product.category === "La-Roche Posay" ? (
-        <Link href={`/products/${product._id}`}>
-        <Card className='flex justify-between cursor-pointer relative w-[250px]'>
+      {product.category === "La-Roche Posay" ? (
+          <Card className='flex justify-between cursor-pointer relative w-[250px]'>
+          <Link href={`/products/${product._id}`}>
           <CardHeader>
             <Image width={300} height={300} src={product.media[0]} alt='product' className="w-[300px] h-[230px]" />
             <div className='absolute bottom-28 right-5'>
@@ -39,9 +39,9 @@ const ProductCardLa = ({ product, updateSignedInUser }: ProductCardProps ) => {
               </div>
             </div>
           </CardFooter>
+          </Link>
         </Card>
-        </Link>) : ""}
-          
+      ) : ""} 
     </section>
   );
 };

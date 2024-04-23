@@ -7,9 +7,9 @@ const Collections = async () => {
 
   return (
     <section className="my-10 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-9 md:grid-cols-6 grid-cols-3  mt-4">
+        <div className="grid lg:grid-cols-9 md:grid-cols-6 grid-cols-3  ">
           {collections.map((collection: CollectionType) => (
-            <Link href={`/collections/${collection._id}`} key={collection._id} className="flex flex-col justify-center items-center gap-y-2 hover:scale-110">
+            <Link href={`/collections/${collection._id}`} key={collection._id} className="flex flex-col justify-center items-center gap-y-2 mt-8 hover:scale-110">
               <Image
                 key={collection._id}
                 src={collection.image}
@@ -18,7 +18,7 @@ const Collections = async () => {
                 height={100}
                 className="rounded-full cursor-pointer"
               />
-              <p className="text-muted-foreground text-sm">{collection.title}</p>
+              <p className="text-muted-foreground text-xs">{collection.title}</p>
             </Link>
           ))}
         </div>
