@@ -4,6 +4,7 @@ import useCart from "@/lib/hooks/useCart";
 
 import { UserButton, useUser } from "@clerk/nextjs";
 import { CircleUserRound, Menu, Search, ShoppingCart, User } from "lucide-react";
+import { CartSidebar } from "./CartSidebar";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -27,7 +28,7 @@ const Navbar = () => {
 
       <div className="flex gap-3 border border-grey-2 px-3 py-1 items-center rounded-lg">
         <input
-          className="outline-none  min-w-[400px] max-sm:max-w-[150px]"
+          className="outline-none min-w-[50px]  sm:min-w-[150px]  lg:min-w-[400px] max-sm:max-w-[150px]"
           placeholder="Search..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -39,16 +40,10 @@ const Navbar = () => {
           <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
         </button>
       </div>
-
       <div className="relative flex gap-3 items-center">
-        <Link
-          href="/cart"
-          className="flex items-center gap-3 border rounded-lg px-2 py-1  max-md:hidden"
-        >
-          <ShoppingCart className="text-primary" />
-          <p className="text-base-bold">Cart ({cart.cartItems.length})</p>
-        </Link>
-
+        <div className="hidden md:block">
+          <CartSidebar />
+        </div>
         <Menu
           className="cursor-pointer lg:hidden"
           onClick={() => setDropdownMenu(!dropdownMenu)}
@@ -95,13 +90,7 @@ const Navbar = () => {
             >
               FAQs
             </Link>
-            <Link
-              href="/cart"
-              className="flex items-center gap-3 border rounded-lg px-2 py-1"
-            >
-              <ShoppingCart className="text-primary" />
-              <p className="text-base-bold">Cart ({cart.cartItems.length})</p>
-            </Link>
+              <CartSidebar />
           </div>
         )}
 

@@ -1,4 +1,4 @@
-"use client";
+  "use client";
 
 import useCart from "@/lib/hooks/useCart";
 
@@ -57,7 +57,7 @@ const Cart = () => {
         <hr className="my-6" />
 
         {cart.cartItems.length === 0 ? (
-          <p className="text-body-bold">No item in cart</p>
+          <h1 className="py-6">You dont have any items</h1>
         ) : (
           <div>
             {cart.cartItems.map((cartItem) => (
