@@ -5,6 +5,7 @@ import { Card, CardDescription, CardFooter, CardHeader } from "@/components/ui/c
 import { Progress } from "@nextui-org/react"
 import { User, Link } from "@nextui-org/react"
 import { FaStar } from "react-icons/fa"
+import RelatedList from "./RelatedList"
 
 
 

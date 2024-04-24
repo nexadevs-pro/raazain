@@ -9,7 +9,7 @@ function Footer() {
 	return (
 		<>
         <section className="mx-auto max-w-7xl">
-			<div className=" h-1/2 w-full flex lg:flex-row flex-col justify-around items-start pt-20 pb-10  mx-auto">
+			<div className=" h-1/2 w-full flex lg:flex-row flex-col justify-around items-start   mx-auto">
 				<div className="py-5 ">
 					<ul>
 						<Image

@@ -1,7 +1,6 @@
 import { getProducts } from "@/lib/actions/actions";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import ProductCardOtwo from "./ProductCardOtwo";
-import ProductCardLa from "./ProductCardLa";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import ProductCardBeauty from "./ProductCardBeauty";

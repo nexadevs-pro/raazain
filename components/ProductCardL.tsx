@@ -3,19 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import HeartFavorite from "./HeartFavorite";
-import { Card, CardHeader, CardFooter } from "@nextui-org/react";
-import { Button } from "./ui/button";
-import { title } from "process";
+import { Card, CardFooter, CardHeader } from "@nextui-org/react";
 import { FaStar } from "react-icons/fa";
 import useCart from "@/lib/hooks/useCart";
 import { useState } from "react";
 import { ShoppingBagIcon, ShoppingBasket } from "lucide-react";
+import { Button } from "./ui/button";
 interface ProductCardProps {
   product: ProductType;
   updateSignedInUser?: (updatedUser: UserType) => void;
 }
 
-const ProductCardHome = ({ product, updateSignedInUser }: ProductCardProps ) => {
+const ProductCardL = ({ product, updateSignedInUser }: ProductCardProps ) => {
   const [selectedColor, setSelectedColor] = useState<string>(
     product.colors[0]
   );
@@ -25,10 +24,9 @@ const ProductCardHome = ({ product, updateSignedInUser }: ProductCardProps ) => 
 
   const [quantity, setQuantity] = useState<number>(1);
   const cart = useCart();
-  
   return (
     <section>
-        {product.category === "Home" ? (
+        {product.category === "La-Roche Posay" ? (
         <Link key={product._id} href={`/products/${product._id}`}>
         <Card className='flex justify-between cursor-pointer relative w-[220px]'>
           <CardHeader>
@@ -77,4 +75,4 @@ const ProductCardHome = ({ product, updateSignedInUser }: ProductCardProps ) => 
   );
 };
 
-export default ProductCardHome;
+export default ProductCardL;
