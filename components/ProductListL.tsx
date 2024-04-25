@@ -8,12 +8,12 @@ const RelatedList = async () => {
 
   return (
     <>
-    <h1 className="max-w-7xl mx-auto px-10  text-2xl font-semibold text-indigo-950">La-Roche Posay</h1>
-          <Carousel className="xl:max-w-7xl lg:max-w-7xl px-10 flex gap mx-auto pb-10">
-            <CarouselContent className="flex mx-auto ml-10">
+    <h1 className="max-w-[82rem] mx-auto px-4  text-2xl font-semibold text-indigo-950">La-Roche Posay</h1>
+    <Carousel className="max-w-[82rem]  flex gap mx-auto pb-10">
+            <CarouselContent className="flex mx-auto ">
           {products.map((product: ProductType) => (
-            <CarouselItem   className=" basis-1/2 md:basis-1/3 xl:basis-1/4 -ml-14   flex-wrap">
-              <div className="p-5">
+            <CarouselItem   className="grid grid-cols-1  sm:basis-1/2 md:basis-1/3 lg:basis-1/5 xl:basis-1/6">
+              <div className="p-5 mx-auto">
             <ProductCardL key={product._id} product={product}/>
             </div>
             </CarouselItem>
