@@ -6,6 +6,7 @@ import ProductPageRList from "./ProductPageRList";
 
 export const ProductDescription = ({ productInfo }: { productInfo: ProductType }) => {
   return (
+    <>
     <section className="flex flex-col">
     <div className="flex flex-col lg:flex-row   justify-between">
       <div className="flex flex-col justify-center">
@@ -49,7 +50,8 @@ export const ProductDescription = ({ productInfo }: { productInfo: ProductType }
         ></iframe>
       </div>
     </div>
-    <ProductPageRList />
     </section>
+    <ProductPageRList />
+    </>
   );
 };

@@ -15,7 +15,7 @@ const ProductDetails = async ({ params }: { params: { productId: string }}) => {
 
   return (
     <>
-    <section className='pl-10 pr-5 pt-8 max-w-7xl mx-auto'>
+    <section className='pl-4 pr-5 pt-8 max-w-[82rem] mx-auto'>
       <div>
         <BreadCrumbs productInfo={productDetails} />
       </div>
