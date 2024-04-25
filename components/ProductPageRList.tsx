@@ -6,12 +6,12 @@ const ProductPageRList = async() => {
     const products = await getProducts();
   return (
     <>
-    <h1 className="max-w-7xl mx-auto   text-2xl font-semibold text-indigo-950">Related Products</h1>
-          <Carousel className="xl:max-w-7xl lg:max-w-7xl  flex  mx-auto ">
-            <CarouselContent className="flex mx-auto ml-10">
+    <h1 className="max-w-[82rem] mx-auto   text-2xl font-semibold text-indigo-950">Related Products</h1>
+    <Carousel className="max-w-[82rem]  flex gap mx-auto pb-10">
+            <CarouselContent className="flex mx-auto ">
           {products.map((product: ProductType) => (
-            <CarouselItem   className=" basis-1/2 md:basis-1/3 xl:basis-1/4 -ml-16   flex-wrap">
-              <div className="p-5">
+            <CarouselItem   className="grid grid-cols-1  sm:basis-1/2 md:basis-1/3 lg:basis-1/5 xl:basis-1/6">
+              <div className="p-5 mx-auto">
             <ProductCard key={product._id} product={product}/>
             </div>
             </CarouselItem>
