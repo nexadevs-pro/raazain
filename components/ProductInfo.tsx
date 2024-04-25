@@ -91,9 +91,12 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
           />
         </div>
       </div>
-
+      <div className="flex flex-row gap-x-5 mt-3 rounded-lg">
+      <Button>
+        Buy Now
+      </Button>
       <Button
-        className=" py-3 mt-6 rounded-lg hover:bg-primary hover:text-white"
+        className=" hover:bg-primary hover:text-white"
         onClick={() => {
           cart.addItem({
             item: productInfo,
@@ -105,6 +108,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
       >
         Add To Cart
       </Button>
+      </div>
     </div>
   );
 };
