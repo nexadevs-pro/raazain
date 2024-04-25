@@ -27,7 +27,7 @@ const ProductCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
   const cart = useCart();
   return (
     <Link key={product._id} href={`/products/${product._id}`}>
-    <Card className='flex justify-between cursor-pointer relative w-[212px] h-[350px]'>
+    <Card className='flex justify-between cursor-pointer relative w-[214px] h-[350px]'>
       <CardHeader>
         <Image width={300} height={300} src={product.media[0]} alt='product' className="w-[229px] h-[212px]" />
         <div className='absolute bottom-[40px] right-5'>
