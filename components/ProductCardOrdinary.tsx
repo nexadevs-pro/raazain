@@ -29,7 +29,7 @@ const ProductCardOrdinary = ({ product, updateSignedInUser }: ProductCardProps )
     <section>
         {product.category === "The Ordinary" ? (
         <Link key={product._id} href={`/products/${product._id}`}>
-        <Card shadow="sm" className='flex justify-between cursor-pointer relative w-[205px] h-[350px]'>
+        <Card shadow="sm" className='flex justify-between cursor-pointer relative w-[202px] h-[350px]'>
           <CardHeader>
             <Image width={300} height={300} src={product.media[0]} alt='product' className="w-[229px] h-[212px]" />
             <div className='absolute bottom-[40px] right-5'>
