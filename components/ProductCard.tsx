@@ -50,8 +50,8 @@ const ProductCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
         <h1 className='text-sm line-clamp-1 pb-1'>{product.title}</h1>
         <p className='text-primary font-medium'>Dhs. {product.price}</p>
         <div className="flex flex-row justify-between items-center gap-x-12">
-        <div className="flex flex-row">
-          <h1 className='line-through pr-1  text-xs'>Dhs. 121</h1>
+        <div className="flex flex-row gap-x-2 justify-evenly">
+          <h1 className='line-through  text-xs'>Dhs. 121</h1>
           <p className='text-xs text-primary'>25% OFF</p>
         </div>
         <div className="flex flex-row items-center ">
