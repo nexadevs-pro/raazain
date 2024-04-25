@@ -52,7 +52,7 @@ const ProductCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
         <div className="flex flex-row justify-between items-center gap-x-12">
         <div className="flex flex-row gap-x-2 justify-evenly">
           <h1 className='line-through  text-xs'>Dhs. 121</h1>
-          <p className='text-xs text-primary'>25% OFF</p>
+          <p className='text-xs text-primary'>25%</p>
         </div>
         <div className="flex flex-row items-center ">
             <p>4.5</p>
