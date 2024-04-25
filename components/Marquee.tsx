@@ -10,7 +10,7 @@ import Link from 'next/link';
 export const MarqueeComponent = async () => {
     const products = await getProducts();
   return (
-    <section className='max-w-7xl mx-auto mb-20 flex flex-row px-10'>
+    <section className='max-w-[82rem] mx-auto mb-20 flex flex-row px-4'>
         <Image src='/Group-17418.png' alt='' width={150} height={50} />
     <Marquee>
         {products.map((product: ProductType) => (

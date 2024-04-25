@@ -11,9 +11,9 @@ export const LimitedOffer = () => {
   const targetDate = new Date('2024-04-31T23:59:59');
   const targetDate2 = new Date('2024-05-31T23:59:59');
   return (
-    <section className='my-10 max-w-7xl mx-auto'>
+    <section className='my-10 max-w-[82rem] mx-auto'>
       <div className='mt-20 mb-10'>
-        <h1 className='text-2xl font-medium text-gray-700 px-5'>Limited Offer</h1>
+        <h1 className='text-2xl font-medium text-gray-700 px-4'>Limited Offer</h1>
       </div>
       <div className='flex flex-col lg:flex-row  mx-auto justify-between gap-y-4 items-center px-5 '>
         <div className='flex flex-col'>

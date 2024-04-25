@@ -6,7 +6,7 @@ const Collections = async () => {
   const collections = await getCollections();
 
   return (
-    <section className="my-10 max-w-7xl mx-auto">
+    <section className="my-10 max-w-[82rem] px-2 mx-auto">
         <div className="grid lg:grid-cols-7 xl:grid-cols-9 md:grid-cols-6 sm:grid-cols-4 grid-cols-3  ">
           {collections.map((collection: CollectionType) => (
             <Link href={`/collections/${collection._id}`} key={collection._id} className="flex flex-col justify-center items-center gap-y-2 mt-8 hover:scale-110">

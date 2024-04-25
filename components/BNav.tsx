@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const Bnav = () => {
   return (
     <section className='border-b w-full bg-primary md:block hidden'>
-        <div className='h-12  flex flex-row justify-start max-w-7xl  px-10 mx-auto'>
+        <div className='h-12  flex flex-row justify-start max-w-[82rem] px-4 mx-auto'>
             <div className='flex flex-row items-center gap-x-10 text-white'>
                 <div className='md:flex hidden  flex-row items-center gap-x-10'>
                 <Link href={'/'}>

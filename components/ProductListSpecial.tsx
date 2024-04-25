@@ -22,7 +22,7 @@ const ProductListSpecial = async () => {
                 <TabsTrigger value="home">Home Decor</TabsTrigger>
             </TabsList>
           <TabsContent value="beauty" className="relative top-0 ">
-          <Image src={'/45.jpeg'} alt="" height={445} width={1378} className="w-[1378px] h-[445px] absolute"/>
+          <Image src={'/45.jpeg'} alt="" height={445} width={1312} className="w-[1312px] h-[445px] absolute"/>
           <Carousel className="xl:max-w-7xl lg:max-w-7xl px-10 flex  mx-auto pb-10">
             <CarouselContent className="flex mx-auto ml-44">
           {products.map((product: ProductType) => (

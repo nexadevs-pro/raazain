@@ -48,11 +48,6 @@ const ProductCardHome = ({ product, updateSignedInUser }: ProductCardProps ) => 
             }} className="text-primary"/>
               </Button>
             </div>
-            <div className='absolute bottom-28 right-[100px]'>
-          <Button variant='outline' size='icons'>
-            <ShoppingBasket className="text-primary" />
-            </Button>
-          </div>
           </CardHeader>
           <CardFooter className='flex flex-col items-start space-y-1 '>
             <h1 className='text-sm line-clamp-1'>{product.title}</h1>
