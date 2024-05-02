@@ -18,7 +18,7 @@ const Collections = async () => {
                 height={100}
                 className="rounded-full cursor-pointer w-[100px] h-[100px] mb-2 flex items-center justify-center"
               />
-              <p className="text-muted-foreground text-sm line-clamp-1  text-center">{collection.title}</p>
+              <p className="text-muted-foreground text-sm   text-center">{collection.title}</p>
             </Link>
           ))}
         </div>
