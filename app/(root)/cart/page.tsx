@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 
 import useCart from "@/lib/hooks/useCart";
 
@@ -29,7 +29,7 @@ const Cart = () => {
       if (!user) {
         router.push("sign-in");
       } else {
-        console.log("ku6 bhi")
+        console.log("ku6 bhi");
         // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
         //   method: "POST",
         //   body: JSON.stringify({ cartItems: cart.cartItems, customer }),
@@ -40,10 +40,10 @@ const Cart = () => {
         });
         const data = await res.json();
         // window.location.href = data.url;
-        console.log(data.success_url)
-        console.log(data.cancel_url)
+        console.log(data.success_url);
+        console.log(data.cancel_url);
         console.log(data);
-        router.push(data.success_url)
+        router.push(data.success_url);
       }
     } catch (err) {
       console.log("[checkout_POST]", err);
@@ -64,7 +64,7 @@ const Cart = () => {
               <div className="w-full flex max-sm:flex-col max-sm:gap-3 hover:bg-grey-1 px-4 py-3 items-center max-sm:items-start justify-between">
                 <div className="flex items-center">
                   <Image
-                    src={cartItem.item.media[0]}
+                    src={cartItem.item.image[0]}
                     width={100}
                     height={100}
                     className="rounded-lg w-32 h-32 object-cover"

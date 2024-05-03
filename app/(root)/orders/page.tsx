@@ -31,7 +31,7 @@ const Orders = async () => {
               {order.products.map((orderItem: OrderItemType) => (
                 <div className="flex gap-4">
                   <Image
-                    src={orderItem.product.media[0]}
+                    src={orderItem.product.image[0]}
                     alt={orderItem.product.title}
                     width={100}
                     height={100}
@@ -62,11 +62,15 @@ const Orders = async () => {
                     )}
                     <p className="text-small-medium">
                       Unit price:{" "}
-                      <span className="text-small-bold">{orderItem.product.price}</span>
+                      <span className="text-small-bold">
+                        {orderItem.product.price}
+                      </span>
                     </p>
                     <p className="text-small-medium">
                       Quantity:{" "}
-                      <span className="text-small-bold">{orderItem.quantity}</span>
+                      <span className="text-small-bold">
+                        {orderItem.quantity}
+                      </span>
                     </p>
                   </div>
                 </div>

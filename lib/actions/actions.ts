@@ -2,11 +2,27 @@ export const getCollections = async () => {
   const collections = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/collections`)
   return await collections.json()
 }
+export const getCategories = async () => {
+  const collections = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`)
+  return await collections.json()
+}
+export const getSubCollections = async () => {
+  const subcollections = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/sub_collection`)
+  return await subcollections.json()
+}
 
 export const getCollectionDetails = async (collectionId: string) => {
   console.log("\n\n\ncollectionId : ")
   console.log(collectionId)
   const collection = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/collections/${collectionId}`)
+  return await collection.json()
+}
+export const getCategoriesDetails = async (categoriesId: string) => {
+  const collection = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/${categoriesId}`)
+  return await collection.json()
+}
+export const getSubCollectionsDetails = async (sub_collectionId: string) => {
+  const collection = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/sub_collection/${sub_collectionId}`)
   return await collection.json()
 }
 

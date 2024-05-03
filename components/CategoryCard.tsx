@@ -18,7 +18,7 @@ const CategoryCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
     <Link key={product._id} href={`/products/${product._id}`}>
     <Card className='flex justify-between cursor-pointer relative w-[250px]'>
       <CardHeader>
-        <Image width={300} height={300} src={product.media[0]} alt='product' className="w-[300px] h-[230px]" />
+        <Image width={300} height={300} src={product.image[0]} alt='product' className="w-[300px] h-[230px]" />
         <div className='absolute bottom-28 right-5'>
           <HeartFavorite product={product} updateSignedInUser={updateSignedInUser} />
         </div>
@@ -29,7 +29,7 @@ const CategoryCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
         <div className='flex flex-row  items-center justify-between'>
           <div className='flex flex-row  items-center justify-between'>
             <div className='flex flex-row items-center gap-x-2'>
-              <h1 className='line-through pr-1 text-xs'>Dhs. 121</h1>
+                <h1 className='line-through pr-1 text-xs'>Dhs. {product.discount}</h1>
               <p className='text-xs text-primary'>25% OFF</p>
             </div>
             <div className='ml-16 flex items-center gap-x-1'>

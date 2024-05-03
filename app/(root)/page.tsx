@@ -1,5 +1,5 @@
 import { CallToAction } from "@/components/CallToAction";
-import Collections from "@/components/Collections";
+import Categories from "@/components/Categories";
 import { Hero } from "@/components/Hero";
 import { LimitedOffer } from "@/components/LimitedOffer";
 import { MarqueeComponent } from "@/components/Marquee";
@@ -20,8 +20,8 @@ export default function Home() {
       <NewsLetter />
       <Hero />
       <MarqueeComponent  />
-      <LimitedOffer />
-      <Collections />
+      {/* <LimitedOffer /> */}
+      <Categories />
       <ProductListSpecial />
       <RelatedList />
       <ProductListL />

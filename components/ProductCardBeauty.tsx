@@ -10,6 +10,7 @@ import { Heart, ShoppingBagIcon, ShoppingBasket } from "lucide-react";
 import { FaStar } from "react-icons/fa";
 import { useState } from "react";
 import useCart from "@/lib/hooks/useCart";
+import Categories from "./Categories";
 interface ProductCardProps {
   product: ProductType;
   updateSignedInUser?: (updatedUser: UserType) => void;
@@ -17,21 +18,21 @@ interface ProductCardProps {
 
 const ProductCardOtwo = ({ product, updateSignedInUser }: ProductCardProps ) => {
   const [selectedColor, setSelectedColor] = useState<string>(
-    product.colors[0]
+    product.ci1[0]
   );
   const [selectedSize, setSelectedSize] = useState<string>(
-    product.sizes[0]
+    product.size1
   );
 
   const [quantity, setQuantity] = useState<number>(1);
   const cart = useCart();
   return (
     <section>
-        {product.category === "BEAUTY & HEALTH" ? (
+        {product.categories.map === "BEAUTY & HEALTH" ? (
         <Link key={product._id} href={`/products/${product._id}`}>
         <Card shadow="sm" className='flex justify-between cursor-pointer relative w-[202px] h-[350px]'>
           <CardHeader>
-            <Image width={300} height={300} src={product.media[0]} alt='product' className="w-[229px] h-[212px]" />
+            <Image width={300} height={300} src={product.image[0]} alt='product' className="w-[229px] h-[212px]" />
             <div className='absolute bottom-[40px] right-5'>
               <HeartFavorite product={product} updateSignedInUser={updateSignedInUser} />
             </div>
@@ -53,7 +54,7 @@ const ProductCardOtwo = ({ product, updateSignedInUser }: ProductCardProps ) => 
             <p className='text-primary font-medium'>Dhs. {product.price}</p>
             <div className="flex flex-row justify-between items-center gap-x-12">
             <div className="flex flex-row gap-x-2 justify-evenly">
-              <h1 className='line-through  text-xs'>Dhs. 121</h1>
+                  <h1 className='line-through  text-xs'>Dhs. {product.discount}</h1>
               <p className='text-xs text-primary'>25%</p>
             </div>
             <div className="flex flex-row items-center ">
