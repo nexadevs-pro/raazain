@@ -2,11 +2,7 @@ import { getCategories, getCollections } from "@/lib/actions/actions";
 import Image from "next/image";
 import Link from "next/link";
 
-const Collection = async ({
-  params,
-}: {
-  params: { collectionId: string };
-}) => {
+const Collection = async () => {
   const collections = await getCollections()
 
   return (

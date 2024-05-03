@@ -26,7 +26,7 @@ const CategoriesDetails = async ({
       <p className="text-body-normal text-grey-2 text-center max-w-[900px]">{categoriesDetails.description}</p>
       <div className="flex flex-wrap gap-16 justify-center">
         <h1 className="text-xl font-semibold">Collections : </h1>
-        <Collection id={params.categoriesId} />
+        <Collection />
       </div>
     </div>
   );
