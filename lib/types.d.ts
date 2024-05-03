@@ -132,3 +132,12 @@ type UserType = {
   createdAt: string;
   updatedAt: string;
 };
+
+type OrderType = {
+  shippingAddress: Object;
+  _id: string;
+  customerClerkId: string;
+  products: [OrderItemType]
+  shippingRate: string;
+  totalAmount: number
+}
