@@ -22,7 +22,7 @@ const ProductCardOtwo = ({ product, updateSignedInUser }: ProductCardProps) => {
   const cart = useCart();
   return (
     <section>
-      {product.category === "O.TWO.O COSMETICS" ? (
+      {product.categories.map((category) => category.title === "O.TWO.O COSMETICS") ? (
         <Link key={product._id} href={`/products/${product._id}`}>
           <Card
             shadow="sm"

@@ -28,7 +28,7 @@ const ProductCardOtwo = ({ product, updateSignedInUser }: ProductCardProps ) => 
   const cart = useCart();
   return (
     <section>
-        {product.categories.map === "BEAUTY & HEALTH" ? (
+        {product.categories.map((category) => category.title === "BEAUTY & HEALTH") ? (
         <Link key={product._id} href={`/products/${product._id}`}>
         <Card shadow="sm" className='flex justify-between cursor-pointer relative w-[202px] h-[350px]'>
           <CardHeader>
