@@ -28,7 +28,7 @@ export default function Home() {
       <ProductListOtwo />
       <ProductListCosrx />
       <ProductListOrdinary />
-      <CallToAction />
+      {/* <CallToAction /> */}
     </>
   );
 }
